@@ -42,10 +42,18 @@
             Width="250"
             Header="Наименование услуги"
             Binding="{Binding Title}"/>
-                <DataGridTextColumn 
-            Width="100"
-            Header="Стоимость"
-            Binding="{Binding Cost}"/>
+                <DataGridTemplateColumn 
+                    Width="100"
+                    Header="Стоимость">
+
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock 
+                                TextDecorations="{Binding CostTextDecoration}"
+                                Text="{Binding CostString}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn 
             Width="150"
             Header="Стоимость co скидкой"
@@ -71,17 +79,17 @@
                 <DataGridTextColumn 
             Width="60"
             Header="Скидка"
-            Binding="{Binding Discount}"/>
+            Binding="{Binding DiscountString}"/>
             </DataGrid.Columns>
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Style.Triggers>
                         <DataTrigger 
-                Binding="{Binding HasDiscount}" 
-                Value="True">
+                            Binding="{Binding HasDiscount}" 
+                            Value="False">
                             <Setter 
-                    Property="Background" 
-                    Value="LightGreen"/>
+                                Property="Background" 
+                                Value="LightGreen"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
