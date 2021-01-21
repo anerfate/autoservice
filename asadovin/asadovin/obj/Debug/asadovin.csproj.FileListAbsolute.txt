@@ -21,3 +21,5 @@ C:\Users\User\source\repos\asadovin\asadovin\obj\Debug\asadovin.csproj.CoreCompi
 C:\Users\User\source\repos\asadovin\asadovin\obj\Debug\asadovin.csproj.CopyComplete
 C:\Users\User\source\repos\asadovin\asadovin\obj\Debug\asadovin.exe
 C:\Users\User\source\repos\asadovin\asadovin\obj\Debug\asadovin.pdb
+C:\Users\User\source\repos\asadovin\asadovin\obj\Debug\InputBoxWindow.g.cs
+C:\Users\User\source\repos\asadovin\asadovin\obj\Debug\InputBoxWindow.baml

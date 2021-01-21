@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:asadovin"
         mc:Ignorable="d"
+        x:Name="Root"
               Title="Услуги авто сервиса" 
         FontFamily="Arial Black"
         MinHeight="300" MinWidth="300"
@@ -17,12 +18,22 @@
 
         <StackPanel 
             Orientation="Vertical"
-            Margin="5"
+           
             VerticalAlignment="Bottom">
+            <Button
+    Content="Добавить услугу"
+    Visibility="{Binding AdminVisibility}"
+    />
+            <Button
+    Content="{Binding AdminModeCaption}"
+    Name="AdminButton"
+     Margin="10"
+    Click="AdminButton_Click"/>
             <Button 
                 x:Name="ExitButton"
                 Content="Выход"
                 Click="ExitButton_Click"/>
+            
             
         </StackPanel>
         <Image 
@@ -72,6 +83,25 @@
                         Height="64" 
                         Width="64" 
                         Source="{Binding ImageUri}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn
+    Header="Действия">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel 
+                Visibility="{Binding DataContext.AdminVisibility, ElementName=Root}"
+                Orientation="Horizontal">
+                                <Button 
+                        Content="Редактировать" 
+                        Name="EditButton" 
+                        />
+                                <Button 
+                        Content="Удалить" 
+                        Name="DeleteButton" 
+                        />
+                            </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

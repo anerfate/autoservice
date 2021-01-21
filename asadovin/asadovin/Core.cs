@@ -11,5 +11,5 @@ namespace asadovin
         public static demoEntities DB = new demoEntities();
        
     }
-
 }
+
