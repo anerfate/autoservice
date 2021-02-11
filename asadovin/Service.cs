@@ -87,5 +87,19 @@ namespace asadovin
                 return HasDiscount ? "None" : "Strikethrough";
             }
         }
+        public float DiscountFloat
+        {
+            get
+            {
+                return Convert.ToSingle(Discount ?? 0);
+            }
+        }
+        public string DescriptionString
+        {
+            get
+            {
+                return Description ?? "";
+            }
+        }
     }
 }
